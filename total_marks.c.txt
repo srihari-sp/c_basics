@@ -1,0 +1,16 @@
+#include<stdio.h>
+void main(){
+    int tam,eng,mat,sci,soc,tot;
+    printf("Enter the Tamil Mark:");
+    scanf("%d",&tam);
+    printf("Enter the English Mark:");
+    scanf("%d",&eng);
+    printf("Enter the Maths Mark:");
+    scanf("%d",&mat);
+    printf("Enter the Science Mark:");
+    scanf("%d",&sci);
+    printf("Enter the Social Mark:");
+    scanf("%d",&soc);
+    tot=tam+eng+mat+sci+soc;
+    printf("Total Marks:%d",tot);
+}
