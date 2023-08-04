@@ -1,0 +1,41 @@
+#include<stdio.h>
+#include<string.h>
+
+void main() {
+    
+    int menu, quantity, price;
+    
+    char drink[50];
+    
+    printf("1. coffee: $15\n");
+    printf("2. Hot tea: $20\n");
+    printf("3. Cold coffee: $30\n");
+    printf("4. Milk shake: $50\n");
+    
+    printf("Enter the menu: ");
+    scanf("%d", &menu);
+    switch (menu) {
+        case 1:
+            strcpy(drink, "Coffee");
+            price = 15;
+            break;
+        case 2:
+            strcpy(drink, "Tea");
+            price = 20;
+            break;
+        case 3:
+            strcpy(drink, "Cold Coffee");
+            price = 30;
+            break;
+        case 4:
+            strcpy(drink, "Milk Shake");
+            price = 50;
+            break;
+    }
+    
+    printf("Enter the quantity: ");
+    scanf("%d", &quantity);
+    int total = price * quantity;
+    
+    printf("Total Amount of %d %s is $%d", quantity, drink, total);
+}
