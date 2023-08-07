@@ -1,40 +1,37 @@
 #include<stdio.h>
 
-int * addition(int hari[2][2], int bala[2][2]) {
+void addition(int input_1[2][2], int input_2[2][2], int result[2][2]) {
     printf("Performing addition\n");
-    int result[2][2];
     for (int i = 0; i < 2; i++) {
         for (int j = 0; j < 2; j++) {
-            result[i][j] = hari[i][j] + bala[i][j];
+            result[i][j] = input_1[i][j] + input_2[i][j];
         }
     }
     printf("Done addition\n");
-    return result;
 }
     
-void print_result(int ** a) {
+void print_result(int result[2][2]) {
     printf("The resultant matrix:\n");
     for (int i = 0; i < 2; i++) {
-        printf("i: %d\n", i);
         for (int j = 0; j < 2; j++) {
-            printf("j: %d\n", j);
-            printf("%d", a[i][j]);
+            printf("%d ", result[i][j]);
         }
         printf("\n");
     }
 }
+
 void main() {
     int a[2][2] = {{2, 4}, {5,3}};
     int b[2][2] = {{1, 6}, {6,2}};
     
-    int *result;
+    int result[2][2];
     
     char opp;
     printf("Enter the operator: ");
     scanf("%c", &opp);
     switch (opp) {
         case '+':
-            result = addition(a, b);
+            addition(a, b, result);
             break;
         default:
             printf("Invalid operator");
