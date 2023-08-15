@@ -1,0 +1,12 @@
+#include<stdio.h>
+
+int square(int sq) {
+  int squ = sq * sq;
+  printf("The square of %d is : %d", sq, squ);
+}
+void main() {
+  int a;
+  printf("Input any number for square: ");
+  scanf("%d", & a);
+  square(a);
+}
