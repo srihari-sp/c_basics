@@ -1,0 +1,47 @@
+#include<stdio.h>
+
+void print(float area) {
+  printf("Area is %.2f", area);
+}
+void main() {
+  int shape, length, breath;
+  float area;
+  printf("1.circle");
+  printf("\n2.square");
+  printf("\n3.rectangle");
+  printf("\n4.triangle");
+  printf("\nEnter a shape number: ");
+  scanf("%d", & shape);
+  switch (shape) {
+  case 1:
+    int radius;
+    printf("\nEnter the radius: ");
+    scanf("%d", & radius);
+    area = 3.14 * radius * radius;
+    break;
+  case 2:
+    int side;
+    printf("Enter the side: ");
+    scanf("%d", & side);
+    area = side * side;
+    break;
+  case 3:
+    printf("Enter the length: ");
+    scanf("%d", & length);
+    printf("Enter the breath: ");
+    scanf("%d", & breath);
+    area = length * breath;
+    break;
+  case 4:
+    printf("Enter the length: ");
+    scanf("%d", & length);
+    printf("Enter the breath: ");
+    scanf("%d", & breath);
+    area = 0.5 * (length * breath);
+    break;
+  default:
+    printf("Invalid shape");
+    break;
+  }
+  print(area);
+}
