@@ -1,0 +1,11 @@
+#include<stdio.h>
+
+void main() {
+    int born, now, result;
+    printf("Enter your born year: ");
+    scanf("%d", &born);
+    printf("Enter the current year: ");
+    scanf("%d", &now);
+    result = now - born;
+    printf("Your age is %d", result);
+}
